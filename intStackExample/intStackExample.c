@@ -23,7 +23,7 @@ void push(Element e)
 {
 	if (is_full())
 		error("스택 포화 에러");
-	return data[++top] = e;
+	data[++top] = e;
 }
 
 Element pop()
