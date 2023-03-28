@@ -13,7 +13,7 @@ typedef struct Student
 typedef Student Element;
 
 typedef struct stack 
-{
+{                          
 	Element data[MAX_STACK_SIZE];
 	int top;
 } Stack;
