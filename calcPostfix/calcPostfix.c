@@ -1,4 +1,10 @@
-﻿
+﻿/*
+프로그램 내용 : 후위수식표기법으로 표기된 식을 계산하는 프로그램
+실습일 : 2023.03.23
+실습자 : 박현규
+학번 : 202111678
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_STACK_SIZE 100

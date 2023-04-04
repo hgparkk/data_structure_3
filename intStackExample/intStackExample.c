@@ -1,4 +1,10 @@
-﻿
+﻿/*
+프로그램 내용 : 정수로된 스택 예제 프로그램
+실습일 : 2023.03.23
+실습자 : 박현규
+학번 : 202111678
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_STACK_SIZE 100

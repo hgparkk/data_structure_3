@@ -1,4 +1,11 @@
-﻿
+﻿/*
+프로그램 내용 : 괄호가 알맞게 들어갔는지 검사하는 프로그램
+실습일 : 2023.03.23
+실습자 : 박현규
+학번 : 202111678
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_STACK_SIZE 100
