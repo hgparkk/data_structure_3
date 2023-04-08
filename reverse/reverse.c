@@ -1,6 +1,6 @@
 ﻿/*
-프로그램 내용 : 정수로된 스택 예제 프로그램
-실습일 : 2023.03.23
+프로그램 내용 : 문자열을 역순으로 출력하는 프로그램
+실습일 : 2023.04.08
 실습자 : 박현규
 학번 : 202111678
 */
@@ -23,7 +23,7 @@ void error(char str[])
 void init_stack() { top = -1; }
 int is_empty() { return top == -1; }
 int is_full() { return top == MAX_STACK_SIZE; }
-int size() { return top+1; }
+int size() { return top + 1; }
 
 void push(Element e)
 {
@@ -46,25 +46,28 @@ Element peek()
 	return data[top];
 }
 
-void print_stack(char msg[]) 
+void char_reverse(char expr[], char reverse[])
 {
-	int i;
-	printf("%s[%2d]=", msg, size());
-	for (i = 0;i < size();i++)
-		printf("%2d", data[i]);
-	printf("\n");
+	char c;
+	int i = 0;
+	init_stack();
+	while (expr[i] != '\0')
+	{
+		c = expr[i++];
+		push(c);
+	}
+	i = 0;
+	while (is_empty() == 0)
+		reverse[i++] = pop();
+	reverse[i] = '\0';
 }
 
 int main()
 {
-	int i;
-
-	init_stack();
-	for (i = 1; i < 10; i++)
-		push(i);
-	print_stack("스택 push 9회");
-	printf("\tpop() --> %d\n", pop());
-	printf("\tpop() --> %d\n", pop());
-	printf("\tpop() --> %d\n", pop());
-	print_stack("스택 pop 3회");
+	char expr[80];
+	char reverse[80];
+	printf("문자열을 입력하세요 >>");
+	scanf("%s", &expr);
+	char_reverse(expr, reverse);
+	printf("%s", reverse);
 }
